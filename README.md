@@ -23,3 +23,7 @@ GitHub puede tardar en emitir el certificado HTTPS después de verificar el domi
 ## AdSense
 
 Antes de añadir anuncios hay que obtener la aprobación de Google y reemplazar la configuración de ejemplo por el ID real de editor (`ca-pub-...`). Mantener visibles las páginas de privacidad y términos y no solicitar clics en anuncios.
+
+## Recurso editorial y difusión
+
+El sitio cuenta con cuatro recursos editoriales enlazables: [guía de despedida](https://chaumessi.com.ar/despedida/), [historia de Messi con Argentina](https://chaumessi.com.ar/historia/), [dónde ver el partido](https://chaumessi.com.ar/donde-ver/) y [galería acreditada](https://chaumessi.com.ar/galeria/). La cronología incluye descargas en [CSV](https://chaumessi.com.ar/historia/messi-argentina.csv) y [JSON](https://chaumessi.com.ar/historia/messi-argentina.json). También hay un [widget editorial embebible](https://chaumessi.com.ar/widget/) con código de iframe. Para proponer estos recursos a medios o comunidades, usar la guía de [difusión editorial](LINK_OUTREACH.md): personalizar cada contacto y dejar la decisión de enlazar enteramente al editor. No comprar enlaces, automatizar mensajes ni insertar enlaces optimizados en widgets.
