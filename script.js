@@ -14,3 +14,33 @@ if (countdown) {
   update();
   setInterval(update, 1000);
 }
+
+const shareActions = document.querySelector('[data-share-url]');
+if (shareActions) {
+  const shareUrl = window.location.href.split('#')[0];
+  const shareText = 'Un homenaje a Leo Messi y a su historia con la Selección Argentina 🇦🇷';
+  const feedback = shareActions.querySelector('.share-feedback');
+
+  shareActions.querySelectorAll('[data-share-network]').forEach((button) => {
+    const network = button.dataset.shareNetwork;
+    if (network === 'facebook') {
+      button.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+    }
+    if (network === 'x') {
+      button.href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`;
+    }
+    if (network === 'whatsapp') {
+      button.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(`${shareText} ${shareUrl}`)}`;
+    }
+    if (network === 'instagram') {
+      button.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(shareUrl);
+          feedback.textContent = 'Enlace copiado. Pegalo en tu historia o publicación de Instagram.';
+        } catch {
+          feedback.textContent = `Copiá este enlace para compartirlo en Instagram: ${shareUrl}`;
+        }
+      });
+    }
+  });
+}
